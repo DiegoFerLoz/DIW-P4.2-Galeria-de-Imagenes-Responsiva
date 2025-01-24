@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="sp">
 
 <head>
     <title>Juegos</title>
@@ -23,15 +23,16 @@
     </header>
     <main>
         <section class="mt-4 container">
-            <div class="row justify-content-between align-items-center">
-                <div class="col-12 col-sm-6 col-lg-3 mb-2">
+            <div class="row justify-content-between">
+                <div class="col-12 col-sm-6 col-lg-3 mb-2" id="colPlantilla">
                     <div class="card h-100">
-                        <a data-bs-toggle="modal" data-bs-target="#modalPlantilla">
-                            <img class="card-img-top" src="img/CassetteBeasts/CassetteBeasts-small-1x.jpeg" alt="Cassette Beasts img">
+                        <a href="" class="text-decoration-none text-black" data-bs-toggle="modal" data-bs-target="#modalPlantilla" id="enlacePlantilla">
+                            <img class="card-img-top" src="img/placeholder.jpg" alt="Placeholder img" id="imgCardPlantilla" height="171.23px">
+                        
+                            <div class="card-body h-auto">
+                                <h4 class="card-title" id="titleCardPlantilla">Title</h4>
+                            </div>
                         </a>
-                        <div class="card-body">
-                            <h4 class="card-title">Cassette Beasts</h4>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -43,21 +44,21 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <picture class="w-100">
-                        <source srcset="img/CassetteBeasts/CassetteBeasts-small-1x.jpeg, img/CassetteBeasts/CassetteBeasts-small-2x.jpeg 2x" 
-                                media="(max-width: 734px)" />
-                        <source srcset="img/CassetteBeasts/CassetteBeasts-medium-1x.jpeg, img/CassetteBeasts/CassetteBeasts-medium-2x.jpeg 2x" 
-                                media="(max-width: 1068px)" />
-                        <source srcset="img/CassetteBeasts/CassetteBeasts-large-1x.jpeg, img/CassetteBeasts/CassettBeasts-large-2x.jpeg 2x" 
-                                media="(max-width: 1440px)" />
-                        <source srcset="img/CassetteBeasts/CassetteBeasts-xlarge-1x.jpeg, img/CassetteBeasts/CassetteBeasts-xlarge-2x.jpeg 2x" 
-                                media="(min-width: 0px)" />
-                        <img src="img/CassetteBeasts/CassetteBeasts-large-1x.jpeg" class="w-100" alt="Cassette Beasts img" />
+                        <source srcset="img/placeholder.jpg, img/placeholder.jpg 2x" 
+                                media="(max-width: 734px)" id="srcsetModalSmallPlantilla"/>
+                        <source srcset="img/placeholder.jpg, img/placeholder.jpg 2x" 
+                                media="(max-width: 1068px)" id="srcsetModalMediumPlantilla"/>
+                        <source srcset="img/placeholder.jpg, img/placeholder.jpg 2x" 
+                                media="(max-width: 1440px)" id="srcsetModalLargePlantilla"/>
+                        <source srcset="img/placeholder.jpg, img/placeholder.jpg 2x" 
+                                media="(min-width: 0px)" id="srcsetModalXLargePlantilla"/>
+                        <img src="img/placeholder.jpg" class="w-100" alt="Placeholder img" id="imgModalPlantilla"/>
                     </picture>
                 </div>
                 <div class="modal-body">
-                    <h2>Cassette Beasts</h2>
-                    <p class="fs-5">Colecciona increíbles monstruos para usarlos durante las batallas por turnos en este juego de rol de mundo abierto. ¡Combina dos monstruos cualesquiera usando el sistema fusión para crear otros únicos y más poderosos!</p>
-                    <p><b>Mi opinión: </b>Comencé este juego escéptico, sin muchas expectativas. Pensé que sería un clon de Pokémon más, pero ha resultado ser una experiencia totalmente distinta con una identidad propia y bien diferenciada. Un juego muy recomendable. Mención especial a su maravillosa banda sonora.</p>
+                    <h2 id="titleModalPlantilla">Title</h2>
+                    <p class="fs-5" id="descModalPlantilla">Description</p>
+                    <p id="opinionModalPlantilla"><b>Mi opinión: </b>Opinion</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
