@@ -106,6 +106,10 @@ for (let juego of listadoJuegos) {
         "src",
         "img/" + juego.img + "/" + juego.img + "-small-1x" + juego.imgExtension
       );
+      propiedad.setAttribute(
+        "alt",
+        juego.img
+      )
     }
 
     // Cambio el título del juego de la card.
@@ -148,11 +152,23 @@ for (let juego of listadoJuegos) {
         propiedad.setAttribute("id", "srcsetModal" + tamaño + "_" + juego.id);
 
         if (juego.img){
-            propiedad.setAttribute("srcset", "img/" + juego.img + "/" + juego.img + "-" + tamaño + "-1x" + juego.imgExtension + " 1x, "
-                                            + "img/" + juego.img + "/" + juego.img + "-" + tamaño + "-2x" + juego.imgExtension + " 2x");
+            propiedad.setAttribute("srcset", "img/" + juego.img + "/" + juego.img + "-" + tamaño.toLocaleLowerCase() + "-1x" + juego.imgExtension + ", "
+                                            + "img/" + juego.img + "/" + juego.img + "-" + tamaño.toLocaleLowerCase() + "-2x" + juego.imgExtension + " 2x");
         }
     });
 
+    propiedad = document.getElementById("imgModalPlantilla");
+    propiedad.setAttribute("id", "imgModal_" + juego.id);
+    if (juego.img) {
+        propiedad.setAttribute(
+            "src",
+            "img/" + juego.img + "/" + juego.img + "-large-1x" + juego.imgExtension
+        )
+        propiedad.setAttribute(
+            "alt",
+            juego.img
+        )
+    }
   }
 
 }
