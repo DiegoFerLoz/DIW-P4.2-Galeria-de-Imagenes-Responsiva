@@ -9,7 +9,7 @@ let contenedorModals = plantillaModal.parentNode;
 contenedorModals.removeChild(plantillaModal);
 
 // Array para almacenar los tamaños de imagen.
-let tamaños = ["Small", "Medium", "Large", "XLarge"];
+let tamaños = ["Medium", "Large", "XLarge"];
 
 // Array para almacenar los juegos y sus datos.
 let listadoJuegos = [
