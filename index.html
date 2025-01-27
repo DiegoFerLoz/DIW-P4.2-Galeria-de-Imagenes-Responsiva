@@ -22,13 +22,17 @@
         </nav>
     </header>
     <main>
-        <section class="mt-4 container">
+        <section class="mt-4 container"> <!-- 576px -->
             <div class="row justify-content-between">
                 <div class="col-12 col-sm-6 col-lg-3 mb-3" id="colPlantilla">
                     <div class="card h-100">
                         <a href="" class="text-decoration-none text-black" data-bs-toggle="modal" data-bs-target="#modalPlantilla" id="enlaceCardPlantilla">
-                            <img class="card-img-top" src="placeholder.jpg" alt="Placeholder img" id="imgCardPlantilla">
-                        
+                            <picture class="card-img-top">
+                                <source srcset="placeholder.jpg, placeholder.jpg 2x" media="(max-width: 576px)" id="srcsetCardMediumPlantilla"/>
+                                <source srcset="placeholder.jpg, placeholder.jpg 2x" media="(min-width: 0px)" id="srcsetCardSmallPlantilla"/>
+                                <img class="card-img-top" src="placeholder.jpg" alt="Placeholder img" id="imgCardPlantilla">
+                            </picture>
+                            
                             <div class="card-body h-auto">
                                 <h4 class="card-title" id="titleCardPlantilla">Title</h4>
                             </div>

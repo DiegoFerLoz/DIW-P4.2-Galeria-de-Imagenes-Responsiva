@@ -99,6 +99,29 @@ for (let juego of listadoJuegos) {
     modal.setAttribute("id", "modal_" + juego.id);
 
     // Cambio la foto de la card.
+    // Primero cambio el tamaño Medium.
+    propiedad = document.getElementById("srcsetCardMediumPlantilla");
+    propiedad.setAttribute("id", "srcsetCardMedium_" + juego.id);
+    if (juego.img) {
+      propiedad.setAttribute("srcset", "img/" + juego.img + "/" + juego.img + "-medium-1x" + juego.imgExtension + ", "
+                            + "img/" + juego.img + "/" + juego.img + "-medium-2x" + juego.imgExtension + " 2x");
+      propiedad.setAttribute(
+        "alt",
+        juego.img
+      )
+    }
+    // Después cambio el tamaño Small.
+    propiedad = document.getElementById("srcsetCardSmallPlantilla");
+    propiedad.setAttribute("id", "srcsetCardSmall_" + juego.id);
+    if (juego.img) {
+      propiedad.setAttribute("srcset", "img/" + juego.img + "/" + juego.img + "-small-1x" + juego.imgExtension + ", "
+                            + "img/" + juego.img + "/" + juego.img + "-small-2x" + juego.imgExtension + " 2x");
+      propiedad.setAttribute(
+        "alt",
+        juego.img
+      )
+    }
+    // Finalmente cambio la imagen.
     propiedad = document.getElementById("imgCardPlantilla");
     propiedad.setAttribute("id", "imgCard_" + juego.id);
     if (juego.img) {
