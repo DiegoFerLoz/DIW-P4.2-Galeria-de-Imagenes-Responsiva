@@ -169,6 +169,13 @@ for (let juego of listadoJuegos) {
         propiedad.childNodes[0].nodeValue = juego.opinion;
     }
 
+    // Cambio el enlace a FullScreen de la modal.
+    propiedad = document.getElementById("enlaceFullscreenModalPlantilla");
+    propiedad.setAttribute("id", "enlaceFullscreenModal_" + juego.id);
+    if (juego.img){
+        propiedad.setAttribute("href", "img/" + juego.img + "/" + juego.img + "-xlarge-2x" + juego.imgExtension);
+    }
+
     // Cambio las imágenes de la modal.
     tamaños.forEach(tamaño => {
         propiedad = document.getElementById("srcsetModal" + tamaño + "Plantilla");
